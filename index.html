@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="/favicon.2a2e97fc.png">
+
+        <title>[Andrea-Cavallo] | Software Developer</title>
+        <meta name="keywords" content="[Andrea-Cavallo], [Andrea], java, spring, apache-camel, wso2">
+        <!-- Todo: improve your SEO by adding a small description of you -->
+        <meta name="description" content="[Andrea-Cavallo] | Software Developer">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/index.4a508c1d.css">
+        <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+        <!-- Todo: remove the below script once you finish your portfolio -->
+        <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+    </head>
+
+    <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
+    <body>
+        <div id="top"></div>
+
+        <!-- **** Hero Section **** -->
+        <section id="hero" class="jumbotron">
+            <div class="container">
+                <h1 class="hero-title load-hidden"></h1>
+                <p class="hero-cta load-hidden">
+                    <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">About me</a>
+                </p>
+            </div>
+            <script>const heroTitle = document.querySelector(".hero-title");
+const textsToType = [
+    ' <span class="text-color-main">Hi!, my name is Andrea Cavallo</span><br />I\'m a Software Developer \uD83D\uDC68‍\uD83D\uDCBB...\uD83D\uDC4C',
+    "I specialize in Java development ☕︎, utilizing the Spring Framework \uD83C\uDF31, implementing microservices architecture \uD83D\uDCD0, and leveraging middleware solutions such as WSO2 and Apache Camel. \uD83D\uDC2A"
+];
+let currentIndex = 0;
+let currentTextIndex = 0;
+function typeWriter() {
+    if (currentIndex < textsToType[currentTextIndex].length) {
+        if (textsToType[currentTextIndex].charAt(currentIndex) === "<") {
+            const closingTagIndex = textsToType[currentTextIndex].indexOf(">", currentIndex);
+            heroTitle.innerHTML += textsToType[currentTextIndex].slice(currentIndex, closingTagIndex + 1);
+            currentIndex = closingTagIndex;
+        } else heroTitle.innerHTML += textsToType[currentTextIndex].charAt(currentIndex);
+        currentIndex++;
+        setTimeout(typeWriter, 50); // Adjust the typing speed by changing the value (50ms)
+    } else if (currentTextIndex < textsToType.length - 1) setTimeout(()=>{
+        deleteWriter();
+    }, 800); // Adjust the delay before starting the deletion (1500ms)
+    else document.querySelector(".hero-cta").classList.remove("load-hidden");
+}
+function deleteWriter() {
+    if (currentIndex > 0) {
+        heroTitle.innerHTML = heroTitle.innerHTML.slice(0, -1);
+        currentIndex--;
+        setTimeout(deleteWriter, getRandomInt(50, 80)); // Adjust the deletion speed by changing the range (50ms to 150ms)
+    } else {
+        currentTextIndex++;
+        typeWriter();
+    }
+}
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+document.addEventListener("DOMContentLoaded", ()=>{
+    setTimeout(typeWriter, 80); // Adjust the initial delay before typing starts (1000ms)
+});
+
+</script>
+        </section>
+
+        <!-- /END Hero Section -->
+
+        <!-- **** About Section **** -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title load-hidden">About me</h2>
+                <div class="row about-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="about-wrapper__image load-hidden">
+                            <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px" src="/profile.6ee28169.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="about-wrapper__info load-hidden">
+                            <p class="about-wrapper__info-text">
+                                I am a results-driven Software Developer with a Mechanical Engineering background and a passion for Java, Microservices, and Integration Solutions. With two years of experience, my analytical mindset from
+                                engineering has helped me excel in computer science. My expertise includes Java-based environments, Microservices architectures, REST API, Middleware development with WSO2 and Apache Camel, Spring framework,
+                                and NoSQL databases like Neo4j and MongoDB. I adhere to clean code principles for efficient and maintainable systems. I continuously update my skills and stay informed about the latest trends in computer
+                                science. I thrive in team environments, valuing collaboration and leveraging the unique skills and experiences of each team member to create the best solutions.
+                            </p>
+                            <p class="about-wrapper__info-text">
+                                In addition to my professional interests, I have a diverse range of hobbies that help me maintain a well-rounded lifestyle. One of my favorite pastimes is producing electronic music, which allows me to
+                                channel my creativity and explore various sonic landscapes. Additionally, I am passionate about staying up-to-date with new technologies and often engage in self-directed learning to expand my knowledge and
+                                skills. This pursuit not only enriches my personal life but also contributes to my growth as a software developer, enabling me to bring innovative ideas to the projects I work on.
+                            </p>
+                            <span class="d-flex mt-3">
+                                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="/assets/AndreaCavalloResume.pdf">
+                                    View Resume
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /END About Section -->
+
+        <!-- **** Projects Section **** -->
+        <section id="projects">
+            <div class="container">
+                <div class="project-wrapper">
+                    <h2 class="section-title dark-blue-text">Articles & project</h2>
+
+                    <!-- Notice: each .row is a project -->
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="project-wrapper__text load-hidden">
+                                <h3 class="project-wrapper__text-title">A Practical Guide to Microservices Orchestration with Apache Camel</h3>
+                                <div>
+                                    <p class="mb-4">
+                                        Apache Camel is a versatile, open-source integration framework that simplifies the process of connecting and orchestrating various microservices. It empowers developers to create complex routes and
+                                        integrations using simple and reusable components, known as Enterprise Integration Patterns (EIPs). In this project, we will provide a hands-on, practical example of orchestrating microservices using
+                                        Apache Camel.
+                                    </p>
+                                </div>
+                                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://medium.com/@andreacavallo/how-to-esempio-pratico-di-una-orchestrazione-di-microservizi-con-apache-camel-a96f66c85ba5">
+                                    Medium
+                                </a>
+                                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://github.com/Andrea-Cavallo/apachecamel">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="project-wrapper__image load-hidden">
+                                <a rel="noreferrer" href="https://medium.com/@andreacavallo/how-to-esempio-pratico-di-una-orchestrazione-di-microservizi-con-apache-camel-a96f66c85ba5" target="_blank">
+                                    <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                                        <img alt="Project Image" class="img-fluid" src="/project.f500882b.jpg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /END Project -->
+
+                    <!-- Notice: each .row is a project -->
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="project-wrapper__text load-hidden">
+                                <h3 class="project-wrapper__text-title">WSO2-orchestration</h3>
+                                <div>
+                                    <p class="mb-4">
+                                      An example of orchestration in wso2, with comparative analysis.
+                                        
+                                    </p>
+                                </div>
+                                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://medium.com/@andreacavallo/orchestrazione-in-azione-con-wso2-guida-pratica-benchmark-e-analisi-comparativa-7f05e4f206cc">
+                                    Medium
+                                </a>
+                                <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://github.com/Andrea-Cavallo/WSO2-orchestration">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="project-wrapper__image load-hidden">
+                                <a rel="noreferrer" href="https://medium.com/@andreacavallo/orchestrazione-in-azione-con-wso2-guida-pratica-benchmark-e-analisi-comparativa-7f05e4f206cc" target="_blank">
+                                    <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                                        <img alt="Project Image" class="img-fluid" src="/project1.ec8ac1c2.svg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /END Project -->
+
+                    <!-- Notice: each .row is a project -->
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="project-wrapper__text load-hidden">
+                                <h3 class="project-wrapper__text-title">Microservices architecture example</h3>
+                                <div>
+                                    <p class="mb-4">
+                                        This is a simple microservice example that demonstrates the use of WebFlux, CriteriaBuilder Query, and MapStruct to fetch an Order from MongoDB. The application provides a RESTful API that accepts
+                                        query parameters and returns a list of orders that match the given criteria.
+                                    </p>
+                                </div>
+                                <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/Andrea-Cavallo/webFlux-CriteriaBuilderQuery-MapStruct">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="project-wrapper__image load-hidden">
+                                <a rel="noreferrer" href="https://github.com/Andrea-Cavallo/webFlux-CriteriaBuilderQuery-MapStruct" target="_blank">
+                                    <div data-tilt="" data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5" class="thumbnail rounded js-tilt">
+                                        <img alt="Project Image" class="img-fluid" src="/project2.da58e762.jpg">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /END Project -->
+                </div>
+            </div>
+        </section>
+        <!-- /END Projects Section -->
+
+        <!-- **** Contact Section **** -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">{_"feel free to contact me"_};</h2>
+           
+            </div>
+        </section>
+        <!-- /END Contact Section -->
+
+        <!-- **** Footer Section **** -->
+        <footer class="footer navbar-static-bottom">
+            <div class="container">
+                <a rel="noreferrer" href="#top" class="back-to-top">
+                    <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+                </a>
+                <div class="social-links">
+                    <a rel="noreferrer" href="https://stackoverflow.com/users/16351561/andrea-cavallo" target="_blank">
+                        <i class="fa fa-stack-overflow fa-2x"></i>
+                    </a>
+                    <a rel="noreferrer" href="https://www.linkedin.com/in/andrea-cavallo-3b354a135/" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i>
+                    </a>
+                    <a rel="noreferrer" href="https://github.com/Andrea-Cavallo" target="_blank">
+                        <i class="fa fa-github fa-2x"></i>
+                    </a>
+                    <a rel="noreferrer" href="https://medium.com/@andreacavallo" target="_blank">
+                        <i class="fa fa-medium fa-2x"></i>
+                    </a>
+                    <a rel="noreferrer" href="mailto:and.cavallo@proton.me" target="_blank">
+                      <i class="fa fa-envelope fa-2x"></i>
+                  </a>
+                </div>
+
+                <hr>
+
+                <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
+                <p class="footer__text">
+                    © 2023 -
+                    <a rel="noreferrer" href="https://github.com/Andrea-Cavallo" target="_blank">Andrea Cavallo</a>
+                </p>
+            </div>
+        </footer>
+        <!-- /END Footer Section -->
+
+        <script defer="" src="/index.975ef6c8.js"></script>
+    </body>
+</html>
